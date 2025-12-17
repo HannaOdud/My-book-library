@@ -3,11 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>My book library
     </title>
 </head>
 <body>
-    
+    <header>
+        <h1>Library</h1>
+        <p>Just add your favorite book</p>
+    </header>
+    <main>
+        <form id="book_form">
+          <lable for="title">Title:</lable>  
+          <input type="text" id="title" name="title">
+          <label for="author">Author:</label>
+          <input type="text" id="author" name="author">
+          <label for="pages">Pages:</label>
+          <input type="number" id="pages" name="pages">
+          <label >
+            <input type="checkbox" id="checkbox" >Read
+          </label>
+          <button type="submit" id="book_form_button" >Submit</button>
+        </form>
+        <table id="table">
+          <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Number of Pages</th>
+                <th>Read</th>
+                <th></th>
+            </tr>
+          </thead>  
+          <tbody>
+            <tr>
+                <td>The adventure of the Iryna's Cat</td>
+                <td>Iryna Mykytiuk</td>
+                <td>25</td>
+                <td>
+                    <button id="1">Yes</button>
+                </td>
+                <td>
+                    <button id="1_delete">Delete</button>
+                </td>
+            </tr>
+             <tr>
+                <td>The Big Lion</td>
+                <td>Taras Mykytiuk</td>
+                <td>25</td>
+                <td>
+                    <button id="1">Yes</button>
+                </td>
+                <td>
+                    <button id="1_delete">Delete</button>
+                </td>
+            </tr>
+             <tr>
+                <td>The magic laptop</td>
+                <td>Hanna Mykytiuk</td>
+                <td>15</td>
+                <td>
+                    <button id="1">Yes</button>
+                </td>
+                <td>
+                    <button id="1_delete">Delete</button>
+                </td>
+            </tr>
+          </tbody>
+        </table>
+    </main>
 </body>
 <script src="script.js"></script>
 </html>

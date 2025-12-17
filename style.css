@@ -1,0 +1,31 @@
+header{
+    text-align: center;
+    background-color: rgb(230, 228, 145);
+    padding: 20px 0;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    margin: 20px auto;
+}
+button{
+    background-color: rgb(230, 228, 145);
+    border: 1px solid;
+    border-radius: 2px;
+}
+table{
+    width:100%;
+    
+
+}
+thead{
+    background-color:rgb(230, 228, 145) ;
+    padding: 20px 0;
+}
+th{
+    text-align: left;
+    padding: 20px;
+    font-size: 24px;
+}
