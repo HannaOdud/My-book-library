@@ -34,6 +34,16 @@ function displayBooks(){
         pagesCell.textContent = book.pages;
         const readCell = row.insertCell(3);
         readCell.textContent = book.read;
+
+        const deleteCell = row.insertCell(4);
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteCell.appendChild(deleteButton);
+
+        deleteButton.addEventListener("click",()=>{
+            const parentRow = deleteButton.closest("tr");
+            parentRow.remove();
+        })
     });
 }
 
