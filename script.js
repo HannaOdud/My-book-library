@@ -10,7 +10,7 @@ function setup(){
         const title = titleDom.value;
         const author = authorDom.value;
         const pages = pagesDom.value;
-        const read = readDom.value;
+        const read = readDom.checked;
         const book = {
             title: title,
             author: author,
@@ -31,9 +31,25 @@ function displayBooks(){
         const authorCell = row.insertCell(1);
         authorCell.textContent = book.author;
         const pagesCell = row.insertCell(2);
+
         pagesCell.textContent = book.pages;
         const readCell = row.insertCell(3);
-        readCell.textContent = book.read;
+        const readButton = document.createElement("button");
+        if (book.read == true){
+            readButton.textContent = "Yes";
+        }
+        else{readButton.textContent = "No";}
+        readCell.appendChild(readButton);
+
+        readButton.addEventListener("click",() =>{
+            if(readButton.textContent == "Yes"){
+                readButton.textContent = "No";
+            }
+            else{
+               readButton.textContent = "Yes";
+            }
+        })
+
 
         const deleteCell = row.insertCell(4);
         const deleteButton = document.createElement("button");
